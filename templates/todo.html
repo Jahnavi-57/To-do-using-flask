@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/todo.css">
+    <title>Todo-App</title>
+</head>
+<body>
+    <div class="main-title">
+        <h1>TO-DO App</h1>
+    </div>
+    <div class="todo-add-container">
+        <h3 class="todo-title">Add Activity</h3>
+        <form method="POST" action="">
+            {{form.hidden_tag()}}
+            {{form.activity}}
+            {{form.submit}}
+            {% if error %}
+            <div class="error">{{error}}</div>
+            {% endif %}
+        </form>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for row in rows%}
+                <tr class="row-data">
+                    <td class="column1">{{row[0]}}</td>
+                    <td>
+                        <form action="/edittodo/{{row[0]}}" method="POST">
+                            <button  class="edit-button" type="submit">edit</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/deletetodo/{{row[0]}}" method="POST">
+                            <button class="delete-button" type="submit">delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

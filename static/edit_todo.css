@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.main-title{
+    text-align: center;
+    color:purple;
+}
+
+.todo-add-container {
+    padding-top:15px;
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    height: 130px;
+    border-radius: 15px;
+    background-color: aquamarine;
+}
+
+.todo-title {
+    margin-left: 20px;
+    background-color: rgb(197, 137, 214);
+    border-radius: 10px;
+    width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+.todo-title:hover {
+    background-color: plum;
+}
+
+form input {
+    width: calc(100% - 240px);
+    height: 25px;
+    border: 3px solid plum;
+    border-radius: 15px;
+    margin-right: 25px;
+    margin-left: 20px;
+    transition: 0.3s ease;
+}
+
+form input:hover {
+    border-color: purple;
+    transform: scale(1.02);
+}
+
+form input[type="submit"] {
+    width: 110px;
+    margin: 0;
+    height: 30px;
+    border: 3px solid plum;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    border-color: purple;
+    transform: scale(1.1);
+}
+
+.table {
+    margin: auto;
+    top: 30%;
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 15px;
+    padding-bottom:20px;
+    background-color: rgb(197, 137, 214);
+}
+
+.row-data {
+    background-color: #fff;
+}
+
+table {
+    width: 90%;
+    margin-left: 20px;
+}
+
+td {
+    border-radius: 17px;
+    border: 3px solid purple;
+    transition: 0.3s ease;
+}
+
+td:hover {
+    background-color: aqua;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(226, 178, 226);
+}
+
+.column1 {
+    width: 70%;
+}
+
+.edit-button,
+.delete-button {
+    border-radius: 15px;
+    width: 87px;
+    padding: 0;
+    height: 30px;
+    border: 3px solid plum;
+    transition: 0.3s ease;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    border-color: purple;
+}
+
+@media only screen and (max-width: 600px) {
+    form input {
+        width: calc(100% - 170px);
+    }
+
+    .edit-button,
+    .delete-button {
+        width: 90px;
+    }
+}
